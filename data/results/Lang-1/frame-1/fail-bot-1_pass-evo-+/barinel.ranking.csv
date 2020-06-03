@@ -1,0 +1,8 @@
+name;suspiciousness_value;ranking
+org.apache.commons.lang3.math$NumberUtils#toFloat(java.lang.String):199;2.44140625E-4;1
+org.apache.commons.lang3.math$NumberUtils#toFloat(java.lang.String,float):226;2.5089018975452307E-6;2
+org.apache.commons.lang3.math$NumberUtils#toFloat(java.lang.String,float):227;2.5089018975452307E-6;2
+org.apache.commons.lang3.math$NumberUtils#toFloat(java.lang.String,float):228;2.5089018975452307E-6;2
+org.apache.commons.lang3.math$NumberUtils#createInteger(java.lang.String):684;2.5089018975452307E-6;2
+org.apache.commons.lang3.math$NumberUtils#createInteger(java.lang.String):680;1.0058283805847168E-7;3
+org.apache.commons.lang3.math$NumberUtils#toFloat(java.lang.String,float):222;8.38860799999998E-9;4

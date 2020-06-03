@@ -1,0 +1,9 @@
+name;suspiciousness_value;ranking
+org.apache.commons.lang3$ClassUtils#toClass(java.lang.Object[]):908;2.44140625E-4;1
+org.apache.commons.lang3$ClassUtils#toClass(java.lang.Object[]):909;2.44140625E-4;1
+org.apache.commons.lang3$ClassUtils#toClass(java.lang.Object[]):910;2.44140625E-4;1
+org.apache.commons.lang3$ClassUtils#toClass(java.lang.Object[]):905;2.5089018975452307E-6;2
+org.apache.commons.lang3$ClassUtils#toClass(java.lang.Object[]):903;1.0058283805847168E-7;3
+org.apache.commons.lang3$ClassUtils#addAbbreviation(java.lang.String,java.lang.String):116;1.1807075845856467E-21;4
+org.apache.commons.lang3$ClassUtils#addAbbreviation(java.lang.String,java.lang.String):117;1.1807075845856467E-21;4
+org.apache.commons.lang3$ClassUtils#addAbbreviation(java.lang.String,java.lang.String):118;1.1807075845856467E-21;4

@@ -1,0 +1,6 @@
+name;suspiciousness_value;ranking
+org.apache.commons.math.analysis$UnivariateRealSolverUtils#bracket(org.apache.commons.math.analysis.UnivariateRealFunction,double,double,double,int):179;1.0;1
+org.apache.commons.math.analysis$UnivariateRealSolverUtils#bracket(org.apache.commons.math.analysis.UnivariateRealFunction,double,double,double):128;8.38860799999998E-9;2
+org.apache.commons.math.analysis$UnivariateRealSolverUtils#bracket(org.apache.commons.math.analysis.UnivariateRealFunction,double,double,double,int):171;1.1077200472554553E-9;3
+org.apache.commons.math.analysis$UnivariateRealSolverUtils#bracket(org.apache.commons.math.analysis.UnivariateRealFunction,double,double,double,int):174;1.1077200472554553E-9;3
+org.apache.commons.math.analysis$UnivariateRealSolverUtils#bracket(org.apache.commons.math.analysis.UnivariateRealFunction,double,double,double,int):178;1.1077200472554553E-9;3

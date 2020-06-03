@@ -1,0 +1,5 @@
+name;suspiciousness_value;ranking
+org.apache.commons.lang3.text.translate$NumericEntityUnescaper#translate(java.lang.CharSequence,int,java.io.Writer):38;0.14285714285714285;1
+org.apache.commons.lang3.text.translate$NumericEntityUnescaper#translate(java.lang.CharSequence,int,java.io.Writer):40;0.14285714285714285;1
+org.apache.commons.lang3.text.translate$NumericEntityUnescaper#NumericEntityUnescaper():31;0.125;2
+org.apache.commons.lang3.text.translate$CharSequenceTranslator#CharSequenceTranslator():32;0.07142857142857142;3

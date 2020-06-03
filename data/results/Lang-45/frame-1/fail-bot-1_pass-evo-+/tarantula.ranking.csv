@@ -1,0 +1,14 @@
+name;suspiciousness_value;ranking
+org.apache.commons.lang$WordUtils#WordUtils():44;0.9814814814814815;1
+org.apache.commons.lang$WordUtils#WordUtils():45;0.9814814814814815;1
+org.apache.commons.lang$WordUtils#abbreviate(java.lang.String,int,int,java.lang.String):629;0.9464285714285714;2
+org.apache.commons.lang$StringUtils#indexOf(java.lang.String,java.lang.String,int):851;0.8833333333333333;3
+org.apache.commons.lang$StringUtils#indexOf(java.lang.String,java.lang.String,int):855;0.8833333333333333;3
+org.apache.commons.lang$StringUtils#indexOf(java.lang.String,java.lang.String,int):858;0.8833333333333333;3
+org.apache.commons.lang$WordUtils#abbreviate(java.lang.String,int,int,java.lang.String):618;0.8833333333333333;3
+org.apache.commons.lang$WordUtils#abbreviate(java.lang.String,int,int,java.lang.String):622;0.8833333333333333;3
+org.apache.commons.lang$WordUtils#abbreviate(java.lang.String,int,int,java.lang.String):626;0.8833333333333333;3
+org.apache.commons.lang$WordUtils#abbreviate(java.lang.String,int,int,java.lang.String):627;0.8833333333333333;3
+org.apache.commons.lang$WordUtils#abbreviate(java.lang.String,int,int,java.lang.String):628;0.8833333333333333;3
+org.apache.commons.lang$WordUtils#abbreviate(java.lang.String,int,int,java.lang.String):610;0.8688524590163935;4
+org.apache.commons.lang$WordUtils#abbreviate(java.lang.String,int,int,java.lang.String):607;0.8548387096774194;5

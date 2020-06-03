@@ -1,0 +1,5 @@
+name;suspiciousness_value;ranking
+org.apache.commons.math.stat$Frequency#addValue(java.lang.Object):110;2.5089018975452307E-6;1
+org.apache.commons.math.stat$Frequency#Frequency(java.util.Comparator):66;6.742916370762542E-17;2
+org.apache.commons.math.stat$Frequency#Frequency(java.util.Comparator):67;6.742916370762542E-17;2
+org.apache.commons.math.stat$Frequency#Frequency(java.util.Comparator):68;6.742916370762542E-17;2

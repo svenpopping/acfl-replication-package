@@ -1,0 +1,9 @@
+name;suspiciousness_value;ranking
+org.apache.commons.lang3$LocaleUtils#toLocale(java.lang.String):94;0.003853673314629474;1
+org.apache.commons.lang3$LocaleUtils#toLocale(java.lang.String):99;2.6138642776849487E-5;2
+org.apache.commons.lang3$LocaleUtils#toLocale(java.lang.String):96;1.0707777045535349E-8;3
+org.apache.commons.lang3$LocaleUtils#toLocale(java.lang.String):97;1.0707777045535349E-8;3
+org.apache.commons.lang3$LocaleUtils#toLocale(java.lang.String):98;1.0707777045535349E-8;3
+org.apache.commons.lang3$LocaleUtils#toLocale(java.lang.String):89;1.0492794384954025E-8;4
+org.apache.commons.lang3$LocaleUtils#toLocale(java.lang.String):92;1.0492794384954025E-8;4
+org.apache.commons.lang3$LocaleUtils#toLocale(java.lang.String):93;1.0492794384954025E-8;4

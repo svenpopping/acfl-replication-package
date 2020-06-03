@@ -1,0 +1,4 @@
+name;suspiciousness_value;ranking
+org.apache.commons.lang3.math$NumberUtils#createNumber(java.lang.String):451;1.0;1
+org.apache.commons.lang3.math$NumberUtils#createInteger(java.lang.String):684;1.0;1
+org.apache.commons.lang3.math$NumberUtils#createInteger(java.lang.String):680;0.5;2

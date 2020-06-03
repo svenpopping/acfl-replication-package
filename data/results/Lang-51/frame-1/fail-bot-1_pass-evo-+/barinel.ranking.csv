@@ -1,0 +1,10 @@
+name;suspiciousness_value;ranking
+org.apache.commons.lang$BooleanUtils#toBoolean(java.lang.String):677;2.5089018975452307E-6;1
+org.apache.commons.lang$BooleanUtils#toBoolean(java.lang.String):686;2.5089018975452307E-6;1
+org.apache.commons.lang$BooleanUtils#toBoolean(java.lang.String):671;1.0058283805847168E-7;2
+org.apache.commons.lang$BooleanUtils#toBoolean(java.lang.String):672;1.0058283805847168E-7;2
+org.apache.commons.lang$BooleanUtils#toBoolean(java.lang.String):684;1.1077200472554553E-9;3
+org.apache.commons.lang$BooleanUtils#toBoolean(java.lang.String):685;1.1077200472554553E-9;3
+org.apache.commons.lang$BooleanUtils#toBoolean(java.lang.String):662;3.874204889999992E-12;4
+org.apache.commons.lang$BooleanUtils#toBoolean(java.lang.String):659;1.3513057093104018E-12;5
+org.apache.commons.lang$BooleanUtils#toBoolean(java.lang.String):656;5.168114461554615E-13;6

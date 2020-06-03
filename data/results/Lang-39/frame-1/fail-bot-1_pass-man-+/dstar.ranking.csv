@@ -1,0 +1,15 @@
+name;suspiciousness_value;ranking
+org.apache.commons.lang3$StringUtils#isNumericSpace(java.lang.String):4974;1.0;1
+org.apache.commons.lang3$StringUtils#isNumericSpace(java.lang.String):4977;1.0;1
+org.apache.commons.lang3$StringUtils#isNumericSpace(java.lang.String):4978;1.0;1
+org.apache.commons.lang3$StringUtils#isNumericSpace(java.lang.String):4979;1.0;1
+org.apache.commons.lang3$StringUtils#isNumericSpace(java.lang.String):4980;1.0;1
+org.apache.commons.lang3$StringUtils#isAllLowerCase(java.lang.String):5036;1.0;1
+org.apache.commons.lang3$StringUtils#isAllLowerCase(java.lang.String):5039;1.0;1
+org.apache.commons.lang3$StringUtils#isAllLowerCase(java.lang.String):5040;1.0;1
+org.apache.commons.lang3$StringUtils#isAllLowerCase(java.lang.String):5041;1.0;1
+org.apache.commons.lang3$StringUtils#isAllLowerCase(java.lang.String):5042;1.0;1
+org.apache.commons.lang3$StringUtils#replace(java.lang.String,java.lang.String,java.lang.String,int):3438;0.3333333333333333;2
+org.apache.commons.lang3$StringUtils#replace(java.lang.String,java.lang.String,java.lang.String):3405;0.2;3
+org.apache.commons.lang3$StringUtils#replace(java.lang.String,java.lang.String,java.lang.String,int):3437;0.1;4
+org.apache.commons.lang3$StringUtils#isEmpty(java.lang.CharSequence):191;0.011764705882352941;5

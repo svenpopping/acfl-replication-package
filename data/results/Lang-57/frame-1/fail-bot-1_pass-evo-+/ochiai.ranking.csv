@@ -1,0 +1,4 @@
+name;suspiciousness_value;ranking
+org.apache.commons.lang$LocaleUtils#LocaleUtils():63;0.7071067811865475;1
+org.apache.commons.lang$LocaleUtils#LocaleUtils():64;0.7071067811865475;1
+org.apache.commons.lang$LocaleUtils#isAvailableLocale(java.util.Locale):223;0.5773502691896258;2

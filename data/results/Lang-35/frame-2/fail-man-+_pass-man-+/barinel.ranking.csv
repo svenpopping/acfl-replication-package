@@ -1,0 +1,9 @@
+name;suspiciousness_value;ranking
+org.apache.commons.lang3$ArrayUtils#add(java.lang.Object[],java.lang.Object):3292;1.0;1
+org.apache.commons.lang3$ArrayUtils#add(java.lang.Object[],java.lang.Object):3295;1.0;1
+org.apache.commons.lang3$ArrayUtils#add(java.lang.Object[],java.lang.Object):3290;2.5089018975452307E-6;2
+org.apache.commons.lang3$ArrayUtils#add(java.lang.Object[],java.lang.Object):3298;2.5089018975452307E-6;2
+org.apache.commons.lang3$ArrayUtils#add(java.lang.Object[],java.lang.Object):3299;2.5089018975452307E-6;2
+org.apache.commons.lang3$ArrayUtils#add(java.lang.Object[],java.lang.Object):3300;2.5089018975452307E-6;2
+org.apache.commons.lang3$ArrayUtils#copyArrayGrow1(java.lang.Object,java.lang.Class):3535;1.2419731774040225E-11;3
+org.apache.commons.lang3$ArrayUtils#copyArrayGrow1(java.lang.Object,java.lang.Class):3529;1.3513057093104018E-12;4

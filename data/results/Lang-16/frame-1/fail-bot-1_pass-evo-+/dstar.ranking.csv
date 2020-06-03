@@ -1,0 +1,11 @@
+name;suspiciousness_value;ranking
+org.apache.commons.lang3.math$NumberUtils#createNumber(java.lang.String):448;1.0;1
+org.apache.commons.lang3.math$NumberUtils#createNumber(java.lang.String):451;1.0;1
+org.apache.commons.lang3$StringUtils#isBlank(java.lang.CharSequence):223;1.0;1
+org.apache.commons.lang3$StringUtils#isBlank(java.lang.CharSequence):226;1.0;1
+org.apache.commons.lang3$StringUtils#isBlank(java.lang.CharSequence):227;1.0;1
+org.apache.commons.lang3$StringUtils#isBlank(java.lang.CharSequence):228;1.0;1
+org.apache.commons.lang3.math$NumberUtils#createNumber(java.lang.String):445;0.5;2
+org.apache.commons.lang3.math$NumberUtils#min(byte,byte,byte):1128;0.25;3
+org.apache.commons.lang3.math$NumberUtils#min(byte,byte,byte):1131;0.25;3
+org.apache.commons.lang3.math$NumberUtils#min(byte,byte,byte):1134;0.25;3

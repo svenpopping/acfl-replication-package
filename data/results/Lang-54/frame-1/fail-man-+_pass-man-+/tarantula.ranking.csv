@@ -1,0 +1,15 @@
+name;suspiciousness_value;ranking
+org.apache.commons.lang$LocaleUtils#toLocale(java.lang.String):116;0.9166666666666667;1
+org.apache.commons.lang$LocaleUtils#toLocale(java.lang.String):110;0.8461538461538461;2
+org.apache.commons.lang$LocaleUtils#toLocale(java.lang.String):113;0.8461538461538461;2
+org.apache.commons.lang$LocaleUtils#toLocale(java.lang.String):114;0.8461538461538461;2
+org.apache.commons.lang$LocaleUtils#toLocale(java.lang.String):115;0.8461538461538461;2
+org.apache.commons.lang$LocaleUtils#toLocale(java.lang.String):95;0.7857142857142857;3
+org.apache.commons.lang$LocaleUtils#toLocale(java.lang.String):98;0.7857142857142857;3
+org.apache.commons.lang$LocaleUtils#toLocale(java.lang.String):99;0.7857142857142857;3
+org.apache.commons.lang$LocaleUtils#toLocale(java.lang.String):102;0.7857142857142857;3
+org.apache.commons.lang$LocaleUtils#toLocale(java.lang.String):103;0.7857142857142857;3
+org.apache.commons.lang$LocaleUtils#toLocale(java.lang.String):104;0.7857142857142857;3
+org.apache.commons.lang$LocaleUtils#toLocale(java.lang.String):107;0.7857142857142857;3
+org.apache.commons.lang$LocaleUtils#availableLocaleList():192;0.5;4
+org.apache.commons.lang$LocaleUtils#isAvailableLocale(java.util.Locale):223;0.5;4

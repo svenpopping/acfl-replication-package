@@ -1,0 +1,15 @@
+name;suspiciousness_value;ranking
+org.apache.commons.lang3.math$NumberUtils#createNumber(java.lang.String):469;1.0;1
+org.apache.commons.lang3.math$NumberUtils#createNumber(java.lang.String):473;1.0;1
+org.apache.commons.lang3.math$NumberUtils#createNumber(java.lang.String):474;1.0;1
+org.apache.commons.lang3.math$NumberUtils#createNumber(java.lang.String):476;1.0;1
+org.apache.commons.lang3.math$NumberUtils#createNumber(java.lang.String):488;1.0;1
+org.apache.commons.lang3.math$NumberUtils#createNumber(java.lang.String):489;1.0;1
+org.apache.commons.lang3.math$NumberUtils#createNumber(java.lang.String):466;0.017649032121946278;2
+org.apache.commons.lang3.math$NumberUtils#createNumber(java.lang.String):456;0.0011979820852704615;3
+org.apache.commons.lang3.math$NumberUtils#createNumber(java.lang.String):459;0.0011979820852704615;3
+org.apache.commons.lang3$StringUtils#isBlank(java.lang.CharSequence):233;0.0011979820852704615;3
+org.apache.commons.lang3$StringUtils#isBlank(java.lang.CharSequence):236;0.0011979820852704615;3
+org.apache.commons.lang3$StringUtils#isBlank(java.lang.CharSequence):237;0.0011979820852704615;3
+org.apache.commons.lang3$StringUtils#isBlank(java.lang.CharSequence):238;0.0011979820852704615;3
+org.apache.commons.lang3.math$NumberUtils#createNumber(java.lang.String):453;1.3210131231726846E-4;4

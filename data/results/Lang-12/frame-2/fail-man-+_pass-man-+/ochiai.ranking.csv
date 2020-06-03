@@ -1,0 +1,17 @@
+name;suspiciousness_value;ranking
+org.apache.commons.lang3$RandomStringUtils#random(int,int,int,boolean,boolean,char[],java.util.Random):248;0.8164965809277261;1
+org.apache.commons.lang3$RandomStringUtils#random(int,int,int,boolean,boolean,char[],java.util.Random):225;0.7071067811865475;2
+org.apache.commons.lang3$RandomStringUtils#random(int,int,int,boolean,boolean,char[],java.util.Random):227;0.7071067811865475;2
+org.apache.commons.lang3$RandomStringUtils#random(int,int,int,boolean,boolean,char[],java.util.Random):228;0.7071067811865475;2
+org.apache.commons.lang3$RandomStringUtils#random(int,int,int,boolean,boolean,char[],java.util.Random):231;0.7071067811865475;2
+org.apache.commons.lang3$RandomStringUtils#random(int,int,int,boolean,boolean,char[],java.util.Random):232;0.7071067811865475;2
+org.apache.commons.lang3$RandomStringUtils#random(int,int,int,boolean,boolean,char[],java.util.Random):233;0.7071067811865475;2
+org.apache.commons.lang3$RandomStringUtils#random(int,int,int,boolean,boolean,char[],java.util.Random):240;0.7071067811865475;2
+org.apache.commons.lang3$RandomStringUtils#random(int,int,int,boolean,boolean,char[],java.util.Random):241;0.7071067811865475;2
+org.apache.commons.lang3$RandomStringUtils#random(int,int,int,boolean,boolean,char[],java.util.Random):243;0.7071067811865475;2
+org.apache.commons.lang3$RandomStringUtils#random(int,int,int,boolean,boolean,char[],java.util.Random):245;0.7071067811865475;2
+org.apache.commons.lang3$RandomStringUtils#random(int,char[]):318;0.5;3
+org.apache.commons.lang3$RandomStringUtils#random(int,char[]):321;0.5;3
+org.apache.commons.lang3$RandomStringUtils#random(int):69;0.4082482904638631;4
+org.apache.commons.lang3$RandomStringUtils#random(int,boolean,boolean):143;0.4082482904638631;4
+org.apache.commons.lang3$RandomStringUtils#random(int,int,int,boolean,boolean):163;0.4082482904638631;4

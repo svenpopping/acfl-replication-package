@@ -1,0 +1,12 @@
+name;suspiciousness_value;ranking
+org.apache.commons.math.special$Gamma#regularizedGammaP(double,double,double,int):168;0.029411764705882353;1
+org.apache.commons.math.special$Gamma#regularizedGammaP(double,double,double,int):169;0.029411764705882353;1
+org.apache.commons.math.special$Gamma#regularizedGammaP(double,double,double,int):170;0.029411764705882353;1
+org.apache.commons.math.special$Gamma#regularizedGammaP(double,double,double,int):171;0.029411764705882353;1
+org.apache.commons.math.special$Gamma#regularizedGammaP(double,double,double,int):173;0.029411764705882353;1
+org.apache.commons.math.special$Gamma#regularizedGammaP(double,double,double,int):174;0.029411764705882353;1
+org.apache.commons.math.special$Gamma#regularizedGammaP(double,double,double,int):177;0.029411764705882353;1
+org.apache.commons.math.special$Gamma#regularizedGammaP(double,double,double,int):179;0.029411764705882353;1
+org.apache.commons.math.special$Gamma#regularizedGammaP(double,double,double,int):162;0.023809523809523808;2
+org.apache.commons.math.special$Gamma#regularizedGammaP(double,double,double,int):160;0.022727272727272728;3
+org.apache.commons.math.special$Gamma#regularizedGammaP(double,double,double,int):158;0.02040816326530612;4

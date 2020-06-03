@@ -1,0 +1,12 @@
+name;suspiciousness_value;ranking
+org.apache.commons.lang3.text.translate$NumericEntityUnescaper#translate(java.lang.CharSequence,int,java.io.Writer):41;0.9130434782608695;1
+org.apache.commons.lang3.text.translate$NumericEntityUnescaper#translate(java.lang.CharSequence,int,java.io.Writer):42;0.9130434782608695;1
+org.apache.commons.lang3.text.translate$NumericEntityUnescaper#translate(java.lang.CharSequence,int,java.io.Writer):44;0.9130434782608695;1
+org.apache.commons.lang3.text.translate$NumericEntityUnescaper#translate(java.lang.CharSequence,int,java.io.Writer):45;0.9130434782608695;1
+org.apache.commons.lang3.text.translate$NumericEntityUnescaper#translate(java.lang.CharSequence,int,java.io.Writer):52;0.9130434782608695;1
+org.apache.commons.lang3.text.translate$NumericEntityUnescaper#translate(java.lang.CharSequence,int,java.io.Writer):54;0.9130434782608695;1
+org.apache.commons.lang3.text.translate$NumericEntityUnescaper#translate(java.lang.CharSequence,int,java.io.Writer):56;0.9130434782608695;1
+org.apache.commons.lang3.text.translate$NumericEntityUnescaper#translate(java.lang.CharSequence,int,java.io.Writer):38;0.823529411764706;2
+org.apache.commons.lang3.text.translate$NumericEntityUnescaper#translate(java.lang.CharSequence,int,java.io.Writer):40;0.823529411764706;2
+org.apache.commons.lang3.text.translate$NumericEntityUnescaper#NumericEntityUnescaper():31;0.6666666666666666;3
+org.apache.commons.lang3.text.translate$CharSequenceTranslator#CharSequenceTranslator():32;0.5675675675675675;4
