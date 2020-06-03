@@ -1,0 +1,4 @@
+org.joda.time.base.BaseSingleFieldPeriod_ESTest_EvoSuite#test09
+org.joda.time.chrono.BaseChronology_ESTest_EvoSuite#test75
+org.joda.time.Days_ESTest_EvoSuite#test25
+org.joda.time.Days_ESTest_EvoSuite#test26

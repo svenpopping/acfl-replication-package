@@ -1,0 +1,10 @@
+org.joda.time.chrono.BaseChronology_ESTest_EvoSuite#test02
+org.joda.time.chrono.BaseChronology_ESTest_EvoSuite#test23
+org.joda.time.chrono.BaseChronology_ESTest_EvoSuite#test69
+org.joda.time.chrono.BaseChronology_ESTest_EvoSuite#test76
+org.joda.time.chrono.BaseChronology_ESTest_EvoSuite#test78
+org.joda.time.Days_ESTest_EvoSuite#test16
+org.joda.time.Days_ESTest_EvoSuite#test27
+org.joda.time.Days_ESTest_EvoSuite#test28
+org.joda.time.Days_ESTest_EvoSuite#test29
+org.joda.time.field.PreciseDurationDateTimeField_ESTest_EvoSuite#test00
