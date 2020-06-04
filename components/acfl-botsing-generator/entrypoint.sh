@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 set -e
 
-
 # ------------------------------------------------------------------------------
 
 cat <<"EOF"
@@ -28,14 +27,13 @@ function header() {
 }
 
 function message() {
-  echo -e "........................................................................... $1\r$2" >&2
+    echo -e "........................................................................... $1\r$2" >&2
 }
 
 function die() {
-  message "ERROR" "$@" >&2
-  exit 1
+    message "ERROR" "$@" >&2
+    exit 1
 }
-
 
 # ------------------------------------------------------------------------------
 
@@ -50,7 +48,6 @@ HAMCREST_JAR=${DIR_SCRIPT}/botsing/hamcrest-core-1.1.jar
 
 JUNIT_JAR=${DIR_SCRIPT}/botsing/junit.jar
 [[ -s ${JUNIT_JAR} ]] || die "$JUNIT_JAR does not exist or it is empty!"
-
 
 # ------------------------------------------------------------------------------
 
@@ -74,7 +71,6 @@ if [[ $5 != "" ]]; then
     MULTIPLE=$5
 fi
 
-
 # ------------------------------------------------------------------------------
 
 USAGE='Environment variables PROJECT_ID, BUG_ID, TARGET_FRAME, MAX_RETRIES and MULTIPLE are required!'
@@ -86,28 +82,30 @@ USAGE='Environment variables PROJECT_ID, BUG_ID, TARGET_FRAME, MAX_RETRIES and M
 [[ "${MULTIPLE}" != "" ]] || die "${USAGE}"
 [[ "${MULTIPLE}" == "true" ]] && MULTIPLE=1 || MULTIPLE=0
 
+# ------------------------------------------------------------------------------
+# Checkout & Compile the Defects4J project
+# ------------------------------------------------------------------------------
+function checkout_and_compile()  {
+    header 'APPLICATION CHECKOUT'
+
+    DIR_APPLICATION=${DIR_SCRIPT}/application
+
+    message "INFO" "Checkout ${PROJECT_ID}-${BUG_ID}b"
+    defects4j checkout -p ${PROJECT_ID} -v ${BUG_ID}b -w ${DIR_APPLICATION}
+
+    message "INFO" "Compile project and test suite"
+    defects4j compile -w ${DIR_APPLICATION} 2>/dev/null
+}
 
 # ------------------------------------------------------------------------------
-
-header 'APPLICATION CHECKOUT'
-
-DIR_APPLICATION=${DIR_SCRIPT}/application
-
-message "INFO" "Checkout ${PROJECT_ID}-${BUG_ID}b"
-defects4j checkout -p ${PROJECT_ID} -v ${BUG_ID}b -w ${DIR_APPLICATION}
-
-message "INFO" "Compile project and test suite"
-defects4j compile -w ${DIR_APPLICATION} 2> /dev/null
-
-
+# Run botsing
 # ------------------------------------------------------------------------------
-
-function main() {
+function generate_crash_reproducing_test_case() {
     header 'RUN BOTSING'
 
     CRASH_LOG=${DIR_SCRIPT}/crashes/${PROJECT_ID}-${BUG_ID}b.log
-    DIR_BUILD_SOURCE=${DIR_APPLICATION}/$(defects4j export -p dir.bin.classes -w ${DIR_APPLICATION} 2> /dev/null)
-    DIR_BUILD_TEST=${DIR_APPLICATION}/$(defects4j export -p dir.bin.tests -w ${DIR_APPLICATION} 2> /dev/null)
+    DIR_BUILD_SOURCE=${DIR_APPLICATION}/$(defects4j export -p dir.bin.classes -w ${DIR_APPLICATION} 2>/dev/null)
+    DIR_BUILD_TEST=${DIR_APPLICATION}/$(defects4j export -p dir.bin.tests -w ${DIR_APPLICATION} 2>/dev/null)
 
     DIR_RESULTS=${DIR_SCRIPT}/results
     mkdir -p ${DIR_RESULTS}
@@ -116,15 +114,15 @@ function main() {
     REPRODUCTION_LOGS=${DIR_RESULTS}/logs/botsing.reproduction.log
     mkdir -p ${DIR_RESULTS}/logs
 
-    one_run
+    run_until_success_or_max_reached
     message 'DONE' 'Done'
 }
 
 # ------------------------------------------------------------------------------
 # Run Botsing once.
 # ------------------------------------------------------------------------------
-function run_botsing() {
-    BUILD_JARS=$(defects4j export -p cp.test -w ${DIR_APPLICATION} 2> /dev/null)
+function execute_botsing() {
+    BUILD_JARS=$(defects4j export -p cp.test -w ${DIR_APPLICATION} 2>/dev/null)
 
     java -jar ${BOTSING_REPRODUCTION_JAR} \
         -project_cp ${DIR_BUILD_SOURCE}:${DIR_BUILD_TEST}:${BUILD_JARS} \
@@ -137,18 +135,19 @@ function run_botsing() {
         -target_frame ${TARGET_FRAME} \
         -Dsearch_budget=180 \
         -Dpopulation=100 \
-        -Dcatch_undeclared_exceptions=false > ${REPRODUCTION_LOGS}
+        -Dcatch_undeclared_exceptions=false >${REPRODUCTION_LOGS}
 }
 
 # ------------------------------------------------------------------------------
-# One run of Botsing.
+# Run Botsing until it succesfully generated a test case or when
+# it reached the maximum number of retries
 # ------------------------------------------------------------------------------
-function one_run () {
+function run_until_success_or_max_reached() {
     message 'INFO' 'Running Botsing on the problem'
     SUCCESSFUL=false
 
-    for (( TRY = 0; TRY < ${MAX_RETRIES}; ++TRY )); do
-        run_botsing
+    for ((TRY = 0; TRY < ${MAX_RETRIES}; ++TRY)); do
+        execute_botsing
 
         TEST_CASE_NAME=$(find ${DIR_RESULTS} -name '*_ESTest.java' | head -n 1)
         if grep -Fq 'notGeneratedAnyTest' ${TEST_CASE_NAME}; then
@@ -158,7 +157,7 @@ function one_run () {
                 if grep -Fq 'Detect a new crash reproducing test case' ${REPRODUCTION_LOGS}; then
                     message 'SUCCESS' 'Found the optimal solution'
                     SUCCESSFUL=true
-                    break;
+                    break
                 else
                     message 'ERROR' 'Failed to find a solution. Re-try'
                 fi
@@ -166,7 +165,7 @@ function one_run () {
                 if grep -Fq 'target crash is covered' ${REPRODUCTION_LOGS}; then
                     message 'SUCCESS' 'Found the optimal solution'
                     SUCCESSFUL=true
-                    break;
+                    break
                 else
                     message 'ERROR' 'Failed to find a solution. Re-try'
                 fi
@@ -185,7 +184,12 @@ function one_run () {
 }
 
 # ------------------------------------------------------------------------------
-#
+# Startup
 # ------------------------------------------------------------------------------
+function main() {
+    checkout_and_compile
+    generate_crash_reproducing_test_case
+}
+
 main
 exit $?
