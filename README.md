@@ -1,7 +1,7 @@
 # Automated Crash Fault Localization - Replication package
 
-Welcome! 
-This repository contains the 
+Welcome! This repository contains the replication package of my thesis entitled 'Automated Crash Fault Localization'. It has been written to obtain the degree of Master of Science at the Delft University of Technology within the Computer Science program.
+
 
 ## Depending on
 
@@ -10,12 +10,17 @@ This repository contains the
 - [EvoSuite](https://github.com/EvoSuite/evosuite) - Automated generation of JUnit test suites for Java classes
 - [Defects4J](https://github.com/rjust/defects4j) - Database of real faults and an experimental infrastructure to enable controlled experiments in Software Engineering Research 
 
+
 ## Structure
 
 ```text
 acfl-replication-package:
 |
-|--- components:
+|--- components: The components created for the evaluation
+|   |
+|   |--- acfl-base-image: Docker base images
+|   |
+|   |--- acfl-botsing-generator: Botsing generator component
 |
 |--- data:
 |   |
