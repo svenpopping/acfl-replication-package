@@ -15,67 +15,43 @@ Welcome! This repository contains the replication package of my thesis entitled 
 
 ```text
 acfl-replication-package:
-|
-|--- components: The components created for the evaluation
-|   |
-|   |--- acfl-base-image: Docker base images
-|   |
-|   |--- acfl-botsing-generator: Botsing generator component
-|
+|--- components:                        The components created for the evaluation
+|   |--- acfl-base-image:               Docker base images
+|   |--- acfl-botsing-generator:        Botsing generator component
+|   |--- acfl-defects4j-extractor:      Defects4J extractor component
+|   |--- acfl-evosuite-generator:       EvoSuite generator component
 |--- data:
-|   |
-|   |--- problems: The test suites used for the evaluation     
-|   |   |
-|   |   |--- <project_id>-<bug_id>: Defects4J reproducible bugs
-|   |   |   |
-|   |   |   |--- frame-<target_frame>: Target frame used for crash-reproduction
-|   |   |   |   |
-|   |   |   |   |--- tests-fail-bot-+: Multiple failing generated crash-reproducing test cases
-|   |   |   |   |
-|   |   |   |   |--- tests-fail-bot-1: Single failing generated crash-reproducing test cases
-|   |   |   |   |
-|   |   |   |   |--- tests-fail-man-+: Relevant failing hand-written test cases
-|   |   |   |   |
-|   |   |   |   |--- tests-pass-evo-+: Automatically generated passing unit test cases
-|   |   |   |   |
-|   |   |   |   |--- tests-pass-man-+: Relevant passing hand-written test cases
-|   |   |   |
+|   |--- problems:                      The test suites used for the evaluation     
+|   |   |--- <project_id>-<bug_id>:     Defects4J reproducible bugs
+|   |   |   |--- frame-<target_frame>:  Target frame used for crash-reproduction
+|   |   |   |   |--- tests-fail-bot-+:  Multiple failing generated crash-reproducing test cases
+|   |   |   |   |--- tests-fail-bot-1:  Single failing generated crash-reproducing test cases
+|   |   |   |   |--- tests-fail-man-+:  Relevant failing hand-written test cases
+|   |   |   |   |--- tests-pass-evo-+:  Automatically generated passing unit test cases
+|   |   |   |   |--- tests-pass-man-+:  Relevant passing hand-written test cases
 |   |   |   |--- ...
-|   |   |
 |   |   |--- ...
-|   |
-|   |--- results: The results used of the evaluation
-|       |
-|       |--- <project_id>-<bug_id>: Defects4J reproducible bugs
-|       |   |
-|       |   |--- frame-<target_frame>: Target frame used for crash-reproduction
-|       |   |   |
-|       |   |   |--- fail-bot-+_pass-evo-+: Results of the evaluation containing multiple failing
-|       |   |   |                           crash-reproducing test cases and the automatically
-|       |   |   |                           generated passing unit test cases
-|       |   |   |
-|       |   |   |--- fail-bot-+_pass-man-+: Results of the evaluation containing multiple failing
-|       |   |   |                           generated crash-reproducing test cases and the
-|       |   |   |                           hand-written relevant passing test cases
-|       |   |   |
-|       |   |   |--- fail-bot-1_pass-evo-+: Results of the evaluation containing one failing
-|       |   |   |                           crash-reproducing test case and the automatically
-|       |   |   |                           generated passing unit test cases
-|       |   |   |
-|       |   |   |--- fail-bot-1_pass-man-+: Results of the evaluation containing one failing generated 
-|       |   |   |                           crash-reproducing test case and the hand-written
-|       |   |   |                           relevant passing test cases
-|       |   |   |
-|       |   |   |--- fail-man-+_pass-man-+: Results of the evaluation containing only hand-written
-|       |   |                               test cases, for both the crash exposing test cases as
-|       |   |                               well as the relevant passing test cases
-|       |   |
+|   |--- results:                               The results used of the evaluation
+|       |--- <project_id>-<bug_id>:             Defects4J reproducible bugs
+|       |   |--- frame-<target_frame>:          Target frame used for crash-reproduction
+|       |   |   |--- fail-bot-+_pass-evo-+:     Results of the evaluation containing multiple failing
+|       |   |   |                               crash-reproducing test cases and the automatically
+|       |   |   |                               generated passing unit test cases
+|       |   |   |--- fail-bot-+_pass-man-+:     Results of the evaluation containing multiple failing
+|       |   |   |                               generated crash-reproducing test cases and the
+|       |   |   |                               hand-written relevant passing test cases
+|       |   |   |--- fail-bot-1_pass-evo-+:     Results of the evaluation containing one failing
+|       |   |   |                               crash-reproducing test case and the automatically
+|       |   |   |                               generated passing unit test cases
+|       |   |   |--- fail-bot-1_pass-man-+:     Results of the evaluation containing one failing generated 
+|       |   |   |                               crash-reproducing test case and the hand-written
+|       |   |   |                               relevant passing test cases
+|       |   |   |--- fail-man-+_pass-man-+:     Results of the evaluation containing only hand-written
+|       |   |                                   test cases, for both the crash exposing test cases as
+|       |   |                                   well as the relevant passing test cases
 |       |   |--- ...
-|       |
 |       |--- ...
-|
 |--- dashboard:
-|
 |--- scripts:
 ```
 

@@ -18,5 +18,5 @@ docker run \
 ```
 
 After the successful execution of the `botsing-generator`, the results are stored in the following directories:
-- `tests-botsing/` containing the crash-reproducing test class with one or multiple test cases, depending on the mode (single or multiple). For each test class, there is a file containing the test classes itself (denoted by `className\_\-ESTest`), and a file containing the EvoSuite scaffolding (denoted by `className\_\-scaffolding\_\-ESTest`).
+- `tests-botsing/` containing the crash-reproducing test class with one or multiple test cases, depending on the mode (single or multiple). For each test class, there is a file containing the test classes itself (denoted by `className_ESTest`), and a file containing the EvoSuite scaffolding (denoted by `className_scaffolding_ESTest`).
 - `tests-botsing/logs` containing the logs of the latest Botsing execution.

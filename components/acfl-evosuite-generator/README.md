@@ -16,4 +16,4 @@ docker run \
 
 After the successful execution of the `evosuite-generator`, the results are stored in the following directories:
 
-- `tests-botsing/` containing the unit test classes relevant for the given Defects4J project. For each test class, a file containing the test classes itself (denoted by `className\_\-ESTest`), and a file containing the EvoSuite scaffolding (denoted by `className\_\-scaffolding\_\-ESTest`).
+- `tests-botsing/` containing the unit test classes relevant for the given Defects4J project. For each test class, a file containing the test classes itself (denoted by `className_ESTest`), and a file containing the EvoSuite scaffolding (denoted by `className_scaffolding_ESTest`).
