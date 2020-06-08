@@ -2,7 +2,8 @@
 set -e
 
 # ------------------------------------------------------------------------------
-
+# Intro
+# ------------------------------------------------------------------------------
 cat <<"EOF"
   ____        _       _                _____                           _             
  |  _ \      | |     (_)              / ____|                         | |            
@@ -16,9 +17,15 @@ cat <<"EOF"
 EOF
 
 # ------------------------------------------------------------------------------
-
+# Default folders
+# ------------------------------------------------------------------------------
 DIR_SCRIPT=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
+DIR_APPLICATION=${DIR_SCRIPT}/application
+DIR_RESULTS=${DIR_SCRIPT}/results
 
+# ------------------------------------------------------------------------------
+# Helper function
+# ------------------------------------------------------------------------------
 function header() {
     echo ''
     echo "##################################################################################"
@@ -36,43 +43,21 @@ function die() {
 }
 
 # ------------------------------------------------------------------------------
-
+# Libraries
+# ------------------------------------------------------------------------------
 BOTSING_REPRODUCTION_JAR=${DIR_SCRIPT}/botsing/botsing-reproduction-1.0.8-SNAPSHOT.jar
-[[ -s ${BOTSING_REPRODUCTION_JAR} ]] || die "$BOTSING_REPRODUCTION_JAR does not exist or it is empty!"
-
 EVOSUITE_JAR=${DIR_SCRIPT}/botsing/evosuite.jar
-[[ -s ${EVOSUITE_JAR} ]] || die "$EVOSUITE_JAR does not exist or it is empty!"
-
 HAMCREST_JAR=${DIR_SCRIPT}/botsing/hamcrest-core-1.1.jar
-[[ -s ${HAMCREST_JAR} ]] || die "$HAMCREST_JAR does not exist or it is empty!"
-
 JUNIT_JAR=${DIR_SCRIPT}/botsing/junit.jar
+
+[[ -s ${BOTSING_REPRODUCTION_JAR} ]] || die "$BOTSING_REPRODUCTION_JAR does not exist or it is empty!"
+[[ -s ${EVOSUITE_JAR} ]] || die "$EVOSUITE_JAR does not exist or it is empty!"
+[[ -s ${HAMCREST_JAR} ]] || die "$HAMCREST_JAR does not exist or it is empty!"
 [[ -s ${JUNIT_JAR} ]] || die "$JUNIT_JAR does not exist or it is empty!"
 
 # ------------------------------------------------------------------------------
-
-if [[ $1 != "" ]]; then
-    PROJECT_ID=$1
-fi
-
-if [[ $2 != "" ]]; then
-    BUG_ID=$2
-fi
-
-if [[ $3 != "" ]]; then
-    TARGET_FRAME=$3
-fi
-
-if [[ $4 != "" ]]; then
-    MAX_RETRIES=$4
-fi
-
-if [[ $5 != "" ]]; then
-    MULTIPLE=$5
-fi
-
+# Libraries
 # ------------------------------------------------------------------------------
-
 USAGE='Environment variables PROJECT_ID, BUG_ID, TARGET_FRAME, MAX_RETRIES and MULTIPLE are required!'
 
 [[ "${PROJECT_ID}" != "" ]] || die "${USAGE}"
@@ -85,10 +70,8 @@ USAGE='Environment variables PROJECT_ID, BUG_ID, TARGET_FRAME, MAX_RETRIES and M
 # ------------------------------------------------------------------------------
 # Checkout & Compile the Defects4J project
 # ------------------------------------------------------------------------------
-function checkout_and_compile()  {
+function checkout_and_compile() {
     header 'APPLICATION CHECKOUT'
-
-    DIR_APPLICATION=${DIR_SCRIPT}/application
 
     message "INFO" "Checkout ${PROJECT_ID}-${BUG_ID}b"
     defects4j checkout -p ${PROJECT_ID} -v ${BUG_ID}b -w ${DIR_APPLICATION}
@@ -107,7 +90,6 @@ function generate_crash_reproducing_test_case() {
     DIR_BUILD_SOURCE=${DIR_APPLICATION}/$(defects4j export -p dir.bin.classes -w ${DIR_APPLICATION} 2>/dev/null)
     DIR_BUILD_TEST=${DIR_APPLICATION}/$(defects4j export -p dir.bin.tests -w ${DIR_APPLICATION} 2>/dev/null)
 
-    DIR_RESULTS=${DIR_SCRIPT}/results
     mkdir -p ${DIR_RESULTS}
     rm -rf ${DIR_RESULTS:?}/*
 
@@ -139,13 +121,9 @@ function execute_botsing() {
 }
 
 # ------------------------------------------------------------------------------
-# Run Botsing until it succesfully generated a test case or when
-# it reached the maximum number of retries
+# Check if a run is successful
 # ------------------------------------------------------------------------------
-function run_until_success_or_max_reached() {
-    message 'INFO' 'Running Botsing on the problem'
-    SUCCESSFUL=false
-
+function check_if_run_successfull() {
     for ((TRY = 0; TRY < ${MAX_RETRIES}; ++TRY)); do
         execute_botsing
 
@@ -172,6 +150,16 @@ function run_until_success_or_max_reached() {
             fi
         fi
     done
+}
+
+# ------------------------------------------------------------------------------
+# Run Botsing until it succesfully generated a test case or when
+# it reached the maximum number of retries
+# ------------------------------------------------------------------------------
+function run_until_success_or_max_reached() {
+    message 'INFO' 'Running Botsing on the problem'
+    SUCCESSFUL=false
+    check_if_run_successfull
 
     if [[ "${SUCCESSFUL}" == false ]]; then
         cd ${DIR_RESULTS}

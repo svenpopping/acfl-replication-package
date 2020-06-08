@@ -7,10 +7,10 @@ This component generates a test class for each distinct class in the stack trace
 An example command to run the `evosuite-generator` is shown in below, which generates the unit test classes for `LANG-19b` and stores the results in the current directory.
 
 ```
-docker run
-  -e PROJECT_ID=Lang
-  -e BUG_ID=9
-  -v $(pwd)/tests-evosuite:/opt/runner/results
+docker run \
+  -e PROJECT_ID=Lang \
+  -e BUG_ID=9 \
+  -v $(pwd)/tests-evosuite:/opt/runner/results \
   docker.pkg.github.com/svenpopping/acfl-replication-package/evosuite-generator:latest
 ```
 
