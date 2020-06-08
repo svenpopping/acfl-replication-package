@@ -15,20 +15,20 @@ Welcome! This repository contains the replication package of my thesis entitled 
 
 ```text
 acfl-replication-package:
-|--- components:                        The components created for the evaluation
-|   |--- acfl-base-image:               Docker base images
-|   |--- acfl-botsing-generator:        Botsing generator component
-|   |--- acfl-defects4j-extractor:      Defects4J extractor component
-|   |--- acfl-evosuite-generator:       EvoSuite generator component
+|--- components:                                The components created for the evaluation
+|   |--- acfl-base-image:                       Docker base images
+|   |--- acfl-botsing-generator:                Botsing generator component
+|   |--- acfl-defects4j-extractor:              Defects4J extractor component
+|   |--- acfl-evosuite-generator:               EvoSuite generator component
 |--- data:
-|   |--- problems:                      The test suites used for the evaluation     
-|   |   |--- <project_id>-<bug_id>:     Defects4J reproducible bugs
-|   |   |   |--- frame-<target_frame>:  Target frame used for crash-reproduction
-|   |   |   |   |--- tests-fail-bot-+:  Multiple failing generated crash-reproducing test cases
-|   |   |   |   |--- tests-fail-bot-1:  Single failing generated crash-reproducing test cases
-|   |   |   |   |--- tests-fail-man-+:  Relevant failing hand-written test cases
-|   |   |   |   |--- tests-pass-evo-+:  Automatically generated passing unit test cases
-|   |   |   |   |--- tests-pass-man-+:  Relevant passing hand-written test cases
+|   |--- problems:                              The test suites used for the evaluation     
+|   |   |--- <project_id>-<bug_id>:             Defects4J reproducible bugs
+|   |   |   |--- frame-<target_frame>:          Target frame used for crash-reproduction
+|   |   |   |   |--- tests-fail-bot-+:          Multiple failing generated crash-reproducing test cases
+|   |   |   |   |--- tests-fail-bot-1:          Single failing generated crash-reproducing test cases
+|   |   |   |   |--- tests-fail-man-+:          Relevant failing hand-written test cases
+|   |   |   |   |--- tests-pass-evo-+:          Automatically generated passing unit test cases
+|   |   |   |   |--- tests-pass-man-+:          Relevant passing hand-written test cases
 |   |   |   |--- ...
 |   |   |--- ...
 |   |--- results:                               The results used of the evaluation
