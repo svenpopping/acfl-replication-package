@@ -1,0 +1,72 @@
+{
+  "debug": true,
+  "database": {
+    "host": "<db-host>",
+    "name": "<db-name>",
+    "user": "<db-user>",
+    "password": "<db-password>"
+  },
+  "docker": {
+    "gzoltar": {
+      "image": "docker.pkg.github.com/svenpopping/acfl-replication-package/gzoltar-runner:latest",
+      "volumes": {
+        "test-cases": {
+          "passing": "/opt/runner/data/test-pass",
+          "failing": "/opt/runner/data/test-fail"
+        },
+        "results": "/opt/runner/results/sfl/txt"
+      },
+      "options": [
+        "--cpus 2",
+        "--memory 5g",
+        "--network none"
+      ]
+    },
+    "defects4j": {
+      "image": "docker.pkg.github.com/svenpopping/acfl-replication-package/defects4j-extractor:latest",
+      "config": {
+      },
+      "options": [
+        "--cpus 2",
+        "--memory 5g",
+        "--network none"
+      ]
+    },
+    "botsing": {
+      "image": "docker.pkg.github.com/svenpopping/acfl-replication-package/botsing-generator:latest",
+      "config": {
+        "numberOfRetries": 15
+      },
+      "options": [
+        "--cpus 2",
+        "--memory 5g",
+        "--network none"
+      ]
+    },
+    "evosuite": {
+      "image": "docker.pkg.github.com/svenpopping/acfl-replication-package/evosuite-generator:latest",
+      "config": {
+      },
+      "options": [
+        "--cpus 2",
+        "--memory 5g",
+        "--network none"
+      ]
+    }
+  },
+  "data": {
+    "files": "<home-path>/data/results",
+    "test-cases": {
+      "passing": {
+        "human":    "<home-path>/data/problems/%project_id$s-%bug_id$s/frame-%target_frame$s/tests-pass-man-+",
+        "evosuite": "<home-path>/data/problems/%project_id$s-%bug_id$s/frame-%target_frame$s/tests-pass-evo-+"
+      },
+      "failing": {
+        "human": "<home-path>/data/problems/%project_id$s-%bug_id$s/frame-%target_frame$s/tests-fail-man-+",
+        "botsing": "<home-path>/data/problems/%project_id$s-%bug_id$s/frame-%target_frame$s/tests-fail-bot-1",
+        "mult_botsing": "<home-path>/data/problems/%project_id$s-%bug_id$s/frame-%target_frame$s/tests-fail-bot-+"
+      }
+    },
+    "results": "<home-path>/data/results/%project_id$s-%bug_id$s/frame-%target_frame$s"
+  }
+}

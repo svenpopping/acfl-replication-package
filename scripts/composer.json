@@ -1,0 +1,16 @@
+{
+  "name": "root/vendor-download",
+  "require": {
+    "propel/propel": "~2.0@dev",
+    "tplcom/dophpsdk": "^2.0",
+    "katzgrau/klogger": "dev-master",
+    "ext-pdo": "*",
+    "ext-json": "*",
+    "ulrichsg/getopt-php": "^3.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "AFLCR": "src/AFLCR"
+    }
+  }
+}
