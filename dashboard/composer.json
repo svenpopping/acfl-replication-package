@@ -1,0 +1,15 @@
+{
+  "name": "svenpopping/acfl-evaluation-dashboard",
+  "require": {
+    "slim/slim": "4.*",
+    "slim/psr7": "^1.0",
+    "ext-json": "*",
+    "ext-pdo": "*",
+    "ext-dom": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "AFLCR": "src/AFLCR"
+    }
+  }
+}

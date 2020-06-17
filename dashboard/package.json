@@ -1,0 +1,10 @@
+{
+  "name": "acfl_evaluation_dashboard",
+  "version": "1.0.0",
+  "main": "index.php",
+  "license": "MIT",
+  "dependencies": {
+    "chartjs-chart-box-and-violin-plot": "^2.3.0",
+    "clipboard": "^2.0.6"
+  }
+}
