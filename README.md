@@ -52,8 +52,8 @@ acfl-replication-package:
 |       |   |                                   well as the relevant passing test cases
 |       |   |--- ...
 |       |--- ...
-|--- dashboard:
-|--- scripts:
+|--- dashboard:                                 The dashboard used to explore the data
+|--- scripts:                                   Contains the scripts used to run the evaluation
 ```
 
 ## License
