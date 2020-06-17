@@ -1,5 +1,6 @@
 {
   "name": "svenpopping/acfl-evaluation-dashboard",
+  "description": "Dashboard for the ACFL evaluation",
   "require": {
     "slim/slim": "4.*",
     "slim/psr7": "^1.0",
