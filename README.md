@@ -20,6 +20,7 @@ acfl-replication-package:
 |   |--- acfl-botsing-generator:                Botsing generator component
 |   |--- acfl-defects4j-extractor:              Defects4J extractor component
 |   |--- acfl-evosuite-generator:               EvoSuite generator component
+|   |--- acfl-gzoltar-runner:                   GZoltar runner component
 |--- data:
 |   |--- problems:                              The test suites used for the evaluation     
 |   |   |--- <project_id>-<bug_id>:             Defects4J reproducible bugs
